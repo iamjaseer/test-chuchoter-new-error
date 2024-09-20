@@ -1,7 +1,7 @@
 import { useCartContext } from "@/context/cartContext";
 import { useThemeContext } from "@/context/themeContext";
 import { useEffect, useMemo, useState } from "react";
-import { Minus, Plus } from "@phosphor-icons/react";
+
 
 export default function Cart({ type, size, itemid, price, name }) {
     const { cartItems, setCartItems } = useCartContext();
@@ -134,9 +134,7 @@ export default function Cart({ type, size, itemid, price, name }) {
                     onClick={handleCartAction}
                     className="btn btn-outline w-auto border-gray-300 border border-solid rounded-[4px] hover:bg-white hover:border-gray-300 hover:text-black"
                 >
-                   <Plus
-                   color={color}
-                   />
+                +
                     {isInCart ? 'Remove' : 'Add'}
                 </button>
             );
@@ -149,9 +147,7 @@ export default function Cart({ type, size, itemid, price, name }) {
                         className="btn bg-transparent rounded-none border-none shadow-none  hover:bg-white min-h-[55px]"
                         onClick={CartMinus}
                     >
-                      <Minus
-                       color={color}
-                      />
+                   -
                     </button>
                     <input
                         type="number"
@@ -163,9 +159,7 @@ export default function Cart({ type, size, itemid, price, name }) {
                         className="btn bg-transparent rounded-none border-none shadow-none  hover:bg-white min-h-[55px]"
                         onClick={CartPlus}
                     >
-                        <Plus
-                         color={color}
-                        />
+                       +
                     </button>
                 </div>
             );

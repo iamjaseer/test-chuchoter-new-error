@@ -4,7 +4,6 @@ import { useCartContext } from "@/context/cartContext";
 import { adminUrl } from "@/utils/variables";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { X } from "@phosphor-icons/react";
 
 
 export default function CartItem({ item, color }) {
@@ -57,9 +56,7 @@ export default function CartItem({ item, color }) {
                          id="removeFromCart"
                          onClick={(e) => removeFromCartConfirm(itemid)}
                         className="md:hidden absolute right-0 top-0">
-                            <X
-                           color={color}
-                           />
+                          x
                         </button>
                         <Link href={`/${item.main_category}/${item.slug}`}>
                             <h4 className='text-[14px] text-black'>{item?.attributes?.Heading}</h4>
