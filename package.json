@@ -12,6 +12,7 @@
         "@apollo/client": "^3.11.4",
         "@builder.io/partytown": "^0.10.2",
         "@gsap/react": "^2.1.1",
+        "@heroicons/react": "^2.1.5",
         "@phosphor-icons/react": "^2.1.7",
         "@strapi/blocks-react-renderer": "^1.0.1",
         "aos": "^2.3.4",
